@@ -1,0 +1,66 @@
+﻿
+
+<div class="container">
+    <div ng-repeat="recipe in recipes.Recipies">
+
+
+        <h2>{{recipe.Name}}</h2>
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Type</th>
+                        <th>Organic</th>
+                        <th>Price</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="value in recipe.Ingredients">
+                        <td><input ng-model="value.Type" type="text"></td>
+                        <td><input ng-model="value.Organic" type="checkbox"></td>
+                        <td><input ng-model="value.Price" type="text"></td>
+                        <td><input ng-model="value.Amount" type="text"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <input class="btn btn-primary" value="Calculate Recipes" type="button" ng-click="calculateRecipe()">
+
+
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Tax</th>
+                    <th>Discount</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="value in recipeTotals">
+                    <td>{{value.Name}}</td>
+                    <td>{{value.TotalTax}}</td>
+                    <td>{{value.TotalDiscount}}</td>
+                    <td>{{value.Totals}}</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+

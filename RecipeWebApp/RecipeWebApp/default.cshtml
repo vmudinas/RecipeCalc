@@ -1,0 +1,58 @@
+﻿@inherits ViewPage
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="recipeApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="recipeApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="helloApprecipeApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> 
+<html lang="en" ng-app="recipeApp">  <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Recipe App</title>
+        <base href="/"/>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--htmlbuild:bootstrapCss -->
+        <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css" />
+        <!-- endbuild -->
+        <!--build:css /css/app.min.css-->
+        <link rel="stylesheet" href="/css/app.css" />
+        <!-- endbuild -->
+        <!-- htmlbuild:jqueryCdn -->
+        <script src="/node_modules/jquery/dist/jquery.js"></script>
+        <!-- endbuild -->
+        <!-- htmlbuild:bootstrapJs -->
+        <script src="/node_modules/bootstrap/dist/js/bootstrap.js"></script>
+        <!-- endbuild -->
+    </head>
+    <body>
+        <div class="navbar navbar-inverse" role="navigation" ng-controller="navigationCtrl">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/">Recipe App</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li ng-class="{ active: IsRouteActive('/')}"><a href="/">Calculation</a></li>
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div>
+        </div>
+        <div class="container" ng-view></div>
+        <!-- build:js /lib/js/angular.min.js -->
+        <script src="/node_modules/angular/angular.js"></script>
+        <script src="/node_modules/angular-route/angular-route.js"></script>
+        <!-- endbuild -->
+        <!-- build:js /js/app.min.js -->
+        <script src="/js/recipe/controllers.js"></script>
+        <script src="/js/navigation/controllers.js"></script>
+        <script src="/js/app.js"></script>
+        <!-- endbuild -->
+    </body>
+</html>
