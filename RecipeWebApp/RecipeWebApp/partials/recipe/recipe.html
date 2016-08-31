@@ -17,10 +17,10 @@
                 </thead>
                 <tbody>
                     <tr ng-repeat="value in recipe.Ingredients">
-                        <td><input class="recipeType" ng-model="value.Type" type="text" required="required"></td>
+                        <td><input class="recipeType" ng-model="value.Type" type="text" required="required" ></td>
                         <td><input  class="recipeCheckbox" ng-model="value.Organic" type="checkbox"  required="required"></td>
-                        <td><input  class="recipePrice" ng-model="value.Price" type="number"  required="required"></td>
-                        <td><input  class="recipeAmount" ng-model="value.Amount" type="number"  required="required" ></td>
+                        <td><input  class="recipePrice" ng-model="value.Price" type="number"  required="required" min="0"></td>
+                        <td><input  class="recipeAmount" ng-model="value.Amount" type="number"  required="required" min="0" ></td>
                     </tr>
                     <tr>
                         <td></td>
