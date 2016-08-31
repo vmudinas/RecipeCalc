@@ -1,2 +1,7 @@
 ﻿body {
 }
+.recipeType,
+.recipePrice,
+.recipeAmount {
+    width: 135px !important;
+}
